@@ -25,6 +25,8 @@ function RomanNumeral() {
 			return "VIII";
 		} else if (value == 9) {
 			return "VIIII";
+		} else if (value == 10) {
+			return "X";
 		}
 	};
 	
