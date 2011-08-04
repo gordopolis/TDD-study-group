@@ -19,12 +19,12 @@ function RomanNumeral() {
 			return "IV";
 		} else if (value == 5) {
 			return "V";
-		} else if (value == 6) {
-			return "VI";
-		} else if (value == 7) {
-			return "VII";
-		} else if (value == 8) {
-			return "VIII";
+		} else if (value < 9) {
+			val = "V";
+			for (var i = 6; i <= value; i++) {
+				val = val + "I";
+			}
+			return val;	
 		} else if (value == 9) {
 			return "IX";
 		} else if (value == 10) {
