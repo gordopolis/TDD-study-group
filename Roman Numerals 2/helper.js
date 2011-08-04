@@ -23,6 +23,8 @@ function RomanNumeral() {
 			return "VII";
 		} else if (value == 8) {
 			return "VIII";
+		} else if (value == 9) {
+			return "VIIII";
 		}
 	};
 	
