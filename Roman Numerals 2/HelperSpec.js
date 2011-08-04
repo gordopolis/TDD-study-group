@@ -23,4 +23,16 @@ describe("RomanNumerals", function() {
 		expect(numeral).toEqual("I");
 	});
 	
+	it("test 2", function() {
+		var roman = new RomanNumeral();
+		var numeral = roman.toRoman(2);
+		expect(numeral).toEqual("II");
+	});
+	
+	it("test 3", function() {
+		var roman = new RomanNumeral();
+		var numeral = roman.toRoman(3);
+		expect(numeral).toEqual("III");
+	});
+	
 });
