@@ -35,11 +35,7 @@ function RomanNumeral() {
 			return "V";
 			
 		} else if (value < 9) {
-			val = "V";
-			for (var i = 6; i <= value; i++) {
-				val = val + "I";
-			}
-			return val;	
+			return this.foo("V", "I", value - 5);
 			
 		} else if (value == 9) {
 			return "IX";
