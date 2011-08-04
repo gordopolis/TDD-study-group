@@ -10,7 +10,7 @@ function RomanNumeral() {
 	letters[10] = "X";
 	letters[50] = "L";
 	
-	this.foo = function(start, append, count) {
+	this.append = function(start, append, count) {
 		val = start;
 		for (var i = 1; i <= count; i++) {
 			val = val + append;
@@ -26,7 +26,7 @@ function RomanNumeral() {
 			return "N";
 			
 		} else if (value < 4) {
-			return this.foo("", "I", value);
+			return this.append("", "I", value);
 			
 		} else if (value == 4) {
 			return "IV";
@@ -35,7 +35,7 @@ function RomanNumeral() {
 			return "V";
 			
 		} else if (value < 9) {
-			return this.foo("V", "I", value - 5);
+			return this.append("V", "I", value - 5);
 			
 		} else if (value == 9) {
 			return "IX";
