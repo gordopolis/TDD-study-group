@@ -19,6 +19,8 @@ function RomanNumeral() {
 			return "V";
 		} else if (value == 6) {
 			return "VI";
+		} else if (value == 7) {
+			return "VII";
 		}
 	};
 	
