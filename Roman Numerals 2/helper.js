@@ -10,7 +10,13 @@ function RomanNumeral() {
 	letters[10] = "X";
 	letters[50] = "L";
 	
-	base = "I";
+	this.foo = function(start, append, count) {
+		val = start;
+		for (var i = 1; i <= count; i++) {
+			val = val + append;
+		}
+		return val;
+	};
 	
 	this.toRoman = function(value) {
 		if (value < 0) {
@@ -20,11 +26,7 @@ function RomanNumeral() {
 			return "N";
 			
 		} else if (value < 4) {
-			val = "";
-			for (var i = 1; i <= value; i++) {
-				val = val + base;
-			}
-			return val;
+			return this.foo("", "I", value);
 			
 		} else if (value == 4) {
 			return "IV";
@@ -35,7 +37,7 @@ function RomanNumeral() {
 		} else if (value < 9) {
 			val = "V";
 			for (var i = 6; i <= value; i++) {
-				val = val + base;
+				val = val + "I";
 			}
 			return val;	
 			
