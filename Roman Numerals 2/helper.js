@@ -7,12 +7,12 @@ function RomanNumeral() {
 	this.toRoman = function(value) {
 		if (value == 0) {
 			return "N";
-		} else if (value == 1) {
-			return "I";
-		} else if (value == 2) {
-			return "II";
-		} else if (value == 3) {
-			return "III";
+		} else if (value < 4) {
+			val = "";
+			for (var i = 1; i <= value; i++) {
+				val = val + "I";
+			}
+			return val;
 		} else if (value == 4) {
 			return "IV";
 		} else if (value == 5) {
@@ -24,7 +24,7 @@ function RomanNumeral() {
 		} else if (value == 8) {
 			return "VIII";
 		} else if (value == 9) {
-			return "VIIII";
+			return "IX";
 		} else if (value == 10) {
 			return "X";
 		}
