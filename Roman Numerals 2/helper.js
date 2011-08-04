@@ -4,6 +4,14 @@ function echoFunction(message) {
 
 function RomanNumeral() {
 	
+	letters = new Array();
+	letters[1] = "I";
+	letters[5] = "V";
+	letters[10] = "X";
+	letters[50] = "L";
+	
+	base = "I";
+	
 	this.toRoman = function(value) {
 		if (value < 0) {
 			return null;
@@ -14,7 +22,7 @@ function RomanNumeral() {
 		} else if (value < 4) {
 			val = "";
 			for (var i = 1; i <= value; i++) {
-				val = val + "I";
+				val = val + base;
 			}
 			return val;
 			
@@ -27,7 +35,7 @@ function RomanNumeral() {
 		} else if (value < 9) {
 			val = "V";
 			for (var i = 6; i <= value; i++) {
-				val = val + "I";
+				val = val + base;
 			}
 			return val;	
 			
