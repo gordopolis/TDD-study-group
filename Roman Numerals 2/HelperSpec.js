@@ -59,4 +59,10 @@ describe("RomanNumerals", function() {
 		expect(numeral).toEqual("VII");
 	});
 	
+	it("test 8", function() {
+		var roman = new RomanNumeral();
+		var numeral = roman.toRoman(8);
+		expect(numeral).toEqual("VIII");
+	});
+	
 });
