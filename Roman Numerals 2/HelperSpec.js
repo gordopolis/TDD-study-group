@@ -11,6 +11,13 @@ describe("helper.js", function() {
 
 describe("RomanNumerals", function() {
 	
+	it("test negative", function() {
+		var roman = new RomanNumeral();
+		expect(roman.toRoman(-1)).toEqual(null);
+		expect(roman.toRoman(-5)).toEqual(null);
+		expect(roman.toRoman(-500)).toEqual(null);
+	});
+		
 	it("test 0", function() {
 		var roman = new RomanNumeral();
 		var numeral = roman.toRoman(0);

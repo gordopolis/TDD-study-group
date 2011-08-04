@@ -5,7 +5,9 @@ function echoFunction(message) {
 function RomanNumeral() {
 	
 	this.toRoman = function(value) {
-		if (value == 0) {
+		if (value < 0) {
+			return null;
+		} else if (value == 0) {
 			return "N";
 		} else if (value < 4) {
 			val = "";
