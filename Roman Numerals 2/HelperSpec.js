@@ -8,3 +8,19 @@ describe("helper.js", function() {
 	});
 	
 });
+
+describe("RomanNumerals", function() {
+	
+	it("test 0", function() {
+		var roman = new RomanNumeral();
+		var numeral = roman.toRoman(0);
+		expect(numeral).toEqual("N");
+	});
+	
+	it("test 1", function() {
+		var roman = new RomanNumeral();
+		var numeral = roman.toRoman(1);
+		expect(numeral).toEqual("I");
+	});
+	
+});
