@@ -35,4 +35,10 @@ describe("RomanNumerals", function() {
 		expect(numeral).toEqual("III");
 	});
 	
+	it("test 4", function() {
+		var roman = new RomanNumeral();
+		var numeral = roman.toRoman(4);
+		expect(numeral).toEqual("IV");
+	});
+	
 });
