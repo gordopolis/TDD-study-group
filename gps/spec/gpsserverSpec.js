@@ -14,10 +14,33 @@ describe("gpsserver.js", function() {
 			expect(message).toEqual("status of group 1");
 		});
 		
-		it("Update position", function() {
-			var gpsServer = new GpsServer();
-			var message = gpsServer.updatePosition("gps sentence");
+	});
+	
+	describe("Application Flow", function() {
+		var gpsServer = new GpsServer();
+		var cyclistId;
+		
+		it("Login", function() {
+			var cyclistId = gpsServer.login("Marius");
+		});
+		
+		it("Create a new group", function() {
+			var groupId = gpsServer.createGroup(cyclistId, "Marius's group");
+		});
+		
+		it("Update my position", function() {
+			var message = gpsServer.updatePosition(cyclistId, "gps sentence");
 			expect(message).toEqual("gps sentence");
+		});
+		
+		it("Start ride", function() {
+		});
+		
+		it("Group status", function() {
+//			var data = gpsServer.groupStatus(groupId);
+		});
+		
+		it("End ride", function() {
 		});
 	});
 

@@ -22,3 +22,7 @@ Group.find = function(groupId) {
 	group.id = groupId;
 	return group;
 };
+
+Group.findForCyclist = function(cyclistId) {
+	return new Group();
+}
