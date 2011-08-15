@@ -3,3 +3,4 @@ function echoFunction(message) {
 }
 
 // test comment
+// test comment 2
