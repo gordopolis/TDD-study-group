@@ -12,37 +12,30 @@ function RomanNumeral() {
 		return val;
 	};
 	
-	var chars  = new Array("I", "V", "X", "L");
-	var values = new Array(1, 5, 10, 50);
-	
+	var ROMAN_DIGITS = {
+			"X" : 10,
+			"IX" : 9, 
+			"V" : 5,
+			"IV" : 4,
+			"I" : 1
+	};
 	
 	this.toRoman = function(value) {
 		if (value < 0) {
 			return null;
-			
 		} else if (value == 0) {
 			return "N";
 		}
 		
-		for (var i = 0; i < values.length; i++) {
-			if (values[i] == value) {
-				return chars[i];
+		var romanString = "";
+		for (digit in ROMAN_DIGITS) {
+			while (value >= ROMAN_DIGITS[digit]) {
+				romanString += digit;
+				value -= ROMAN_DIGITS[digit];
 			}
 		}
-			
-		if (value < 4) {
-			return this.append("", "I", value);
-			
-		} else if (value == 4) {
-			return "IV";
-			
-		} else if (value < 9) {
-			return this.append("V", "I", value - 5);
-			
-		} else if (value == 9) {
-			return "IX";
-			
-		}
+		return romanString;
+		
 	};
 	
 }
