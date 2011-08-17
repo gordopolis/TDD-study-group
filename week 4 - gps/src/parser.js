@@ -7,3 +7,5 @@ function DecimalCoordinatesParser() {
 
 }
 
+function NmeaParser() {
+}

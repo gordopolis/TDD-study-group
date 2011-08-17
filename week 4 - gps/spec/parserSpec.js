@@ -7,3 +7,10 @@ describe("Decimal Coordinates Parser", function() {
 		
 	});
 });
+
+describe("NMEA Parser", function() {
+	it("Parse", function() {
+		var parser = new NmeaParser();
+		
+	});
+});
