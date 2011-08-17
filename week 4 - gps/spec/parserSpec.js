@@ -16,12 +16,11 @@ describe("NMEA Parser", function() {
 		// type, datestamp, long, lat, ... checksum (XOR $ to *)
 	});
 	
-	it("Reported CRC ", function() {
+	it("Reported CRC", function() {
 		var parser = new NmeaParser();
 		parser.fields = new Array("blah", "*47");
 		var reportedCrc = parser.reportedCrc();
+		expect(reportedCrc).toEqual(71);
 	});
-	
-
 	
 });

@@ -13,6 +13,8 @@ function NmeaParser() {
 	};
 	
 	this.reportedCrc = function() {
-		
+		var crcField = this.fields[this.fields.length - 1];
+		var hexCrc = crcField.substring(1); // strip off the '*'
+		return parseInt(hexCrc, 16);
 	};
 }
