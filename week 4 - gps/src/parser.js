@@ -8,4 +8,7 @@ function DecimalCoordinatesParser() {
 }
 
 function NmeaParser() {
+	this.parse = function(sentence) {
+		
+	};
 }
