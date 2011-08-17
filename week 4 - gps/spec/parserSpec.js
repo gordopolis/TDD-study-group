@@ -30,4 +30,10 @@ describe("NMEA Parser", function() {
 		expect(reportedNmeaType).toEqual("GPGGA");
 	});
 	
+	it("Reported latitude", function() {
+		var parser = new NmeaParser();
+		parser.fields = new Array("type", "date", "4807.038", "N", "blah");
+		var reportedLatitude = parser.reportedLatitude();
+	});
+	
 });

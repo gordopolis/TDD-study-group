@@ -21,4 +21,8 @@ function NmeaParser() {
 	this.reportedNmeaType = function() {
 		return this.fields[0].substring(1); // strip off leading '$'
 	};
+	
+	this.reportedLatitude = function() {
+		
+	};
 }
