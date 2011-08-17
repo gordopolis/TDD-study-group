@@ -17,4 +17,8 @@ function NmeaParser() {
 		var hexCrc = crcField.substring(1); // strip off the '*'
 		return parseInt(hexCrc, 16);
 	};
+	
+	this.reportedNmeaType = function() {
+		
+	};
 }
