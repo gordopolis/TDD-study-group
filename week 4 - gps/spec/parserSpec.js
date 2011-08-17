@@ -15,4 +15,13 @@ describe("NMEA Parser", function() {
 		expect(parser.fields.length).toEqual(15);
 		// type, datestamp, long, lat, ... checksum (XOR $ to *)
 	});
+	
+	it("Reported CRC ", function() {
+		var parser = new NmeaParser();
+		parser.fields = new Array("blah", "*47");
+		var reportedCrc = parser.reportedCrc();
+	});
+	
+
+	
 });
