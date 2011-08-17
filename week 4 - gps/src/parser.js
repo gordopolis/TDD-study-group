@@ -14,11 +14,11 @@ function NmeaParser() {
 	
 	this.reportedCrc = function() {
 		var crcField = this.fields[this.fields.length - 1];
-		var hexCrc = crcField.substring(1); // strip off the '*'
+		var hexCrc = crcField.substring(1); // strip off leading '*'
 		return parseInt(hexCrc, 16);
 	};
 	
 	this.reportedNmeaType = function() {
-		
+		return this.fields[0].substring(1); // strip off leading '$'
 	};
 }

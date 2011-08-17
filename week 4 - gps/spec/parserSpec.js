@@ -27,6 +27,7 @@ describe("NMEA Parser", function() {
 		var parser = new NmeaParser();
 		parser.fields = new Array("$GPGGA", "blah");
 		var reportedNmeaType = parser.reportedNmeaType();
+		expect(reportedNmeaType).toEqual("GPGGA");
 	});
 	
 });
