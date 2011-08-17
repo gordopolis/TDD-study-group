@@ -9,6 +9,6 @@ function DecimalCoordinatesParser() {
 
 function NmeaParser() {
 	this.parse = function(sentence) {
-		
+		this.fields = sentence.split(",");
 	};
 }
