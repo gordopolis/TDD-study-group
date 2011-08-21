@@ -33,6 +33,11 @@ describe("helper.js", function() {
 			var roman = new RomanNumeral();
 			expect(roman.toRoman(5)).toEqual("V");
 		});
+		
+		it("test 6", function() {
+			var roman = new RomanNumeral();
+			expect(roman.toRoman(6)).toEqual("VI");
+		});
 	});
 		
 });
