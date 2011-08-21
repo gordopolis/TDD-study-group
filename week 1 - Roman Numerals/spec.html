@@ -22,6 +22,11 @@
   <script type="text/javascript" src="HelperSpec.js"></script>
   
   <script type="text/javascript">
+	  function AutoRefresh(interval) {
+			setTimeout("location.reload(true);",interval);
+		}
+	
+  
     (function() {
       var jasmineEnv = jasmine.getEnv();
       jasmineEnv.updateInterval = 1000;
@@ -41,6 +46,7 @@
           currentWindowOnload();
         }
         execJasmine();
+        AutoRefresh(10000);
       };
 
       function execJasmine() {
