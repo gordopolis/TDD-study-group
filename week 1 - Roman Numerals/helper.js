@@ -11,6 +11,8 @@ function RomanNumeral() {
 			return "II";
 		} else if (value == 3) {
 			return "III";
+		} else if (value == 4) {
+			return "IV";
 		}
 	};
 }

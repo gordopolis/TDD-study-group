@@ -23,6 +23,11 @@ describe("helper.js", function() {
 			var roman = new RomanNumeral();
 			expect(roman.toRoman(3)).toEqual("III");
 		});
+		
+		it("test 4", function() {
+			var roman = new RomanNumeral();
+			expect(roman.toRoman(4)).toEqual("IV");
+		});
 	});
 		
 });
