@@ -13,6 +13,8 @@ function RomanNumeral() {
 			return "III";
 		} else if (value == 4) {
 			return "IV";
+		} else if (value == 5) {
+			return "V";
 		}
 	};
 }

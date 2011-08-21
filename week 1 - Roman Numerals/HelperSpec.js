@@ -28,6 +28,11 @@ describe("helper.js", function() {
 			var roman = new RomanNumeral();
 			expect(roman.toRoman(4)).toEqual("IV");
 		});
+		
+		it("test 5", function() {
+			var roman = new RomanNumeral();
+			expect(roman.toRoman(5)).toEqual("V");
+		});
 	});
 		
 });
